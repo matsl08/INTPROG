@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http_methods.css">
+    <title>Document</title>
+    <script defer src="request_methods.js"></script>
+</head>
+<body>
+    <div class="container">
+       
+        <!-- <h2>Original Data</h2> -->
+            <div id="originalData">
+            <!-- <script>$fetchData(event)</script> -->
+            </div>
+   
+    </div>
+    <form>
+        <div class="field input">
+            <label for="avatar">User Avatar</label><br>
+            <input type="text" id="avatar" name="avatar" placeholder="Paste Avatar Link"><br><br>
+        </div>
+
+        <div class="field input">
+            <label for="id">ID</label><br>
+            <input type="text" id="id" name="id" required><br><br>
+        </div>
+        <!-- <div class="field input">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name"><br><br>
+        </div> -->
+
+        <div class="field input">
+            <label for="first_name">First Name</label><br>
+            <input type="text" id="first_name" name="first_name"><br><br>
+        </div>
+
+        <div class="field input">
+            <label for="last_name">Last Name</label><br>
+            <input type="text" id="last_name" name="last_name"><br><br>
+        </div>
+        <div class="field input">
+            <label for="email">Email <input type="email" id="email" name="email"><br><br> </label><br>
+        </div>
+
+        <div class="field">
+            <button type="button" class="btn" onclick="getData(event)" cursor="pointer">GET</button>
+            <button type="button" class="btn" onclick="postData(event)" cursor="pointer">POST</button>
+            <button type="button" class="btn" onclick="putData(event)" cursor="pointer">PUT</button>
+            <button type="button" class="btn" onclick="patchData(event)" cursor="pointer">PATCH</button>
+            <button type="button" class="btn" onclick="deleteData(event)" cursor="pointer">DELETE</button>
+        </div>
+        <style>
+            .btn {
+                pointer-events: auto !important;
+                position: relative !important;
+                z-index: 100 !important;
+            }
+            </style>
+    </form>
+
+    <div class="container">
+       
+        <!-- <h2>Updated Data</h2> -->
+            <div id="updatedData"></div>
+    </div>
+</body>
+</html>
