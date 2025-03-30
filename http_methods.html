@@ -6,17 +6,23 @@
     <link rel="stylesheet" href="http_methods.css">
     <title>Document</title>
     <script defer src="request_methods.js"></script>
+    <style>
+        /* Notification Styles */
+#notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+
+    </style>
 </head>
 <body>
-    <div class="container">
-       
-        <!-- <h2>Original Data</h2> -->
-            <div id="originalData">
-            <!-- <script>$fetchData(event)</script> -->
-            </div>
-   
-    </div>
+    <div id="notification" class="notification"></div>
+    <!-- <div class="form-container"> -->
     <form>
+        <h1>User Profile</h1>
         <div class="field input">
             <label for="avatar">User Avatar</label><br>
             <input type="text" id="avatar" name="avatar" placeholder="Paste Avatar Link"><br><br>
@@ -24,7 +30,7 @@
 
         <div class="field input">
             <label for="id">ID</label><br>
-            <input type="text" id="id" name="id" required><br><br>
+            <input type="text" id="id" name="id"><br><br>
         </div>
         <!-- <div class="field input">
             <label for="name">Name</label><br>
@@ -45,7 +51,7 @@
         </div>
 
         <div class="field">
-            <button type="button" class="btn" onclick="getData(event)" cursor="pointer">GET</button>
+            <button popovertarget="originalData" type="button" class="btn" onclick="getData(event)" cursor="pointer">GET</button>
             <button type="button" class="btn" onclick="postData(event)" cursor="pointer">POST</button>
             <button type="button" class="btn" onclick="putData(event)" cursor="pointer">PUT</button>
             <button type="button" class="btn" onclick="patchData(event)" cursor="pointer">PATCH</button>
@@ -59,11 +65,13 @@
             }
             </style>
     </form>
-
-    <div class="container">
+    <!-- </div> -->
+    <div id="originalData">
+        <!-- <script>$fetchData(event)</script> -->
+        </div>
        
         <!-- <h2>Updated Data</h2> -->
             <div id="updatedData"></div>
-    </div>
+ 
 </body>
 </html>
